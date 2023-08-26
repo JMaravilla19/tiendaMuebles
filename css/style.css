@@ -1,0 +1,23 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+h1 span{
+    color: #037bc0;
+}
+h2 span{
+color: green;
+}
+
+.sobre-nosotros{
+    background-color: red;
+    height: 200px;
+    padding: 25px;
+    margin: 100px;
+}
