@@ -1,6 +1,7 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
     box-sizing: border-box;
+    font-size: 62.5%;
 }
 
 *,
@@ -15,8 +16,27 @@ a{
     color: black;
 }
 
+body{
+font-size: 1.6rem; /* back to default */
+font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3{
+    font-family: 'Playfair Display', serif;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
 .nav-principal{
-    padding: 20px 0;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
 }
 
 
@@ -24,6 +44,7 @@ a{
     margin-top: 5rem;
     margin-bottom: 5rem;
     text-align: center;
+    font-size: 4rem;
 }
 
 .nombre-sitio span{
@@ -33,18 +54,45 @@ a{
 
 .hero{
     background-image: url(../img/principal.jpg);
-    height: 550px;
+    height: 55rem;
     background-repeat: no-repeat;
     background-size: cover;
     
 }
 
 .contenedor{
-    max-width: 1200px;
+    max-width: 120rem;
     margin: 0 auto;
-    margin-inline: auto;
+
+    /* Esto hace lo mismo que la linea de arriba */
+    /* margin-inline: auto; */
+}
+
+.categorias h2{
+    text-align: center;
+}
+
+.categoria a{
+    display: block;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.categoria a:hover{
+    background-color: #037bc0;
+    color: #FFFFFF;
+    border-bottom-right-radius: 1rem;
+
 }
 
 .contenedor-navegacion{
-    border-top: 1px dotted black;
+    border-top: .1rem dotted black;
 }
+
+.listado-categorias{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
