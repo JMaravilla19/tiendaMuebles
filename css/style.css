@@ -40,7 +40,7 @@ h3{
 }
 
 img{
-    width: 100%;
+    max-width: 100%;
     display: block;
 }
 
@@ -144,7 +144,8 @@ background-color: #8cbc00;
     padding: 10rem 0;
     background-position: left center;
     background-repeat: no-repeat;
-    background-size: 100%, 120rem; 
+    background-size: 100%, 120rem;
+    margin-top: 5rem; 
 }
 
 .sobre-nosotros-grid{
@@ -201,12 +202,29 @@ background-color: #8cbc00;
     /* grid-column: 1 / 7; */
     grid-column-start: 1;
     grid-column-end: 7;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.producto:nth-child(1) img{
+    height: 43rem;
+    width: 100%;
+    object-fit: cover;
+
 }
 
 .producto:nth-child(2){
     grid-column-start: 1;
     grid-column-end: 4;
 }
+
+.producto:nth-child(2) img, 
+.producto:nth-child(3) img{
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+}
+
 .producto:nth-child(3) {
     grid-column-start: 4;
     grid-column-end: 7;
@@ -225,4 +243,45 @@ background-color: #8cbc00;
 .producto:nth-child(6) {
     grid-column-start: 5;
     grid-column-end: 7;
+}
+
+/* FOOTER */
+.footer-site{
+    border-top: .1rem dotted black;
+    margin-top: 5rem;
+    padding-top: 5rem;
+}
+
+.footer-site h3{
+    margin-bottom: .5rem;
+}
+
+.grid-footer{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 2rem;
+}
+
+.footer-menu a{
+    display: block;
+}
+
+.copyright{
+    text-align: center;
+    margin-top: 6rem;
+}
+
+/* Nosotros PAGINA */
+.contenido-nosotros{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+
+}
+
+.informacion-nosotros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
